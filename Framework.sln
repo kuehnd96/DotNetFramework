@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.22823.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{9D4BE29F-8CE8-44F7-B9EE-085B691B1142}"
 EndProject
@@ -27,45 +27,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DK.Framework.Store.WinPhone
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DK.Framework.Store.NotificationsExtensions", "Store\DK.Framework.Store.NotificationsExtensions\DK.Framework.Store.NotificationsExtensions.csproj", "{17C658D7-5FEF-4DB5-8EFC-31421B327BD0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Windows 8", "Windows 8", "{3061AAED-1FCF-4494-AC80-91DDE9415800}"
+EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 9
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://kuehnd96.visualstudio.com/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = Web\\DK.Framework.Web\\DK.Framework.Web.csproj
-		SccProjectTopLevelParentUniqueName1 = Framework.sln
-		SccProjectName1 = Web/DK.Framework.Web
-		SccLocalPath1 = Web\\DK.Framework.Web
-		SccProjectUniqueName2 = Core\\DK.Framework.Core\\DK.Framework.Core.csproj
-		SccProjectTopLevelParentUniqueName2 = Framework.sln
-		SccProjectName2 = Core/DK.Framework.Core
-		SccLocalPath2 = Core\\DK.Framework.Core
-		SccProjectUniqueName3 = Store\\DK.Framework.Store\\DK.Framework.Store.csproj
-		SccProjectTopLevelParentUniqueName3 = Framework.sln
-		SccProjectName3 = Store/DK.Framework.Store
-		SccLocalPath3 = Store\\DK.Framework.Store
-		SccProjectUniqueName4 = Store\\DK.Framework.Store.Win8\\DK.Framework.Store.Win8.csproj
-		SccProjectTopLevelParentUniqueName4 = Framework.sln
-		SccProjectName4 = Store/DK.Framework.Store.Win8
-		SccLocalPath4 = Store\\DK.Framework.Store.Win8
-		SccProjectUniqueName5 = Store\\DK.Framework.Store.WinPhone8\\DK.Framework.Store.WinPhone8.csproj
-		SccProjectTopLevelParentUniqueName5 = Framework.sln
-		SccProjectName5 = Store/DK.Framework.Store.WinPhone8
-		SccLocalPath5 = Store\\DK.Framework.Store.WinPhone8
-		SccProjectUniqueName6 = Tests\\DK.Framework.Store.Win8.Tests\\DK.Framework.Store.Win8.Tests.csproj
-		SccProjectTopLevelParentUniqueName6 = Framework.sln
-		SccProjectName6 = Tests/DK.Framework.Store.Win8.Tests
-		SccLocalPath6 = Tests\\DK.Framework.Store.Win8.Tests
-		SccProjectUniqueName7 = Tests\\DK.Framework.Store.WinPhone8.Tests\\DK.Framework.Store.WinPhone8.Tests.csproj
-		SccProjectTopLevelParentUniqueName7 = Framework.sln
-		SccProjectName7 = Tests/DK.Framework.Store.WinPhone8.Tests
-		SccLocalPath7 = Tests\\DK.Framework.Store.WinPhone8.Tests
-		SccProjectUniqueName8 = Store\\DK.Framework.Store.NotificationsExtensions\\DK.Framework.Store.NotificationsExtensions.csproj
-		SccProjectTopLevelParentUniqueName8 = Framework.sln
-		SccProjectName8 = Store/DK.Framework.Store.NotificationsExtensions
-		SccLocalPath8 = Store\\DK.Framework.Store.NotificationsExtensions
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|ARM = Debug|ARM
@@ -239,11 +203,12 @@ Global
 		{D9E4DF12-A4C4-444E-A43C-BCF070EDB078} = {9D4BE29F-8CE8-44F7-B9EE-085B691B1142}
 		{4A969959-24A9-4F31-B9DB-C5D6080D7723} = {4820A967-5AA6-4AD6-865D-169B45348CD2}
 		{C9C35709-79E9-484B-9D51-FCFB64B13E26} = {5C6248E9-525E-433A-96A0-6EB26F227DA2}
-		{EE7A024B-FE2A-4BE1-B1E1-57DFC3673856} = {5C6248E9-525E-433A-96A0-6EB26F227DA2}
-		{64ACEF8D-B133-46B0-A97E-18880D73019D} = {5C6248E9-525E-433A-96A0-6EB26F227DA2}
+		{EE7A024B-FE2A-4BE1-B1E1-57DFC3673856} = {3061AAED-1FCF-4494-AC80-91DDE9415800}
+		{64ACEF8D-B133-46B0-A97E-18880D73019D} = {3061AAED-1FCF-4494-AC80-91DDE9415800}
 		{4CACEB16-BD61-49ED-B076-998A71F307A8} = {5C6248E9-525E-433A-96A0-6EB26F227DA2}
 		{3A3F756E-FAEC-42FC-9096-E4EF76FEB45C} = {4CACEB16-BD61-49ED-B076-998A71F307A8}
 		{666CDA53-B41C-4A23-9AA9-98BD580FC25C} = {4CACEB16-BD61-49ED-B076-998A71F307A8}
 		{17C658D7-5FEF-4DB5-8EFC-31421B327BD0} = {5C6248E9-525E-433A-96A0-6EB26F227DA2}
+		{3061AAED-1FCF-4494-AC80-91DDE9415800} = {5C6248E9-525E-433A-96A0-6EB26F227DA2}
 	EndGlobalSection
 EndGlobal
