@@ -56,6 +56,7 @@
     <Compile Include="CompositionStarter.cs" />
     <Compile Include="Converters\BooleanNegationConverter.cs" />
     <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Converters\StringFormatConverter.cs" />
     <Compile Include="Exceptions\SuspensionManagerException.cs" />
     <Compile Include="Initializer.cs" />
     <Compile Include="Interfaces\IMobileServiceClient.cs" />
