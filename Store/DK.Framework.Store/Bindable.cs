@@ -1,14 +1,38 @@
-﻿using System;
+﻿using DK.Framework.Store.Attributes;
+using System;
 using System.ComponentModel;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 
 namespace DK.Framework.Store
 {
     /// <summary>
-    /// Base class for anything that has bindable properties.
+    /// Base class for anything that implements <see cref="INotifyPropertyChanged"/>.
     /// </summary>
     public abstract class Bindable : INotifyPropertyChanged
     {
+        bool _hasChanged = false;
+        bool _isTrackingChanges = false;
+
+        /// <summary>
+        /// Fired when a bindable property changes.
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// Gets or sets whether a trackable property has changed on this instance.
+        /// </summary>
+        public bool HasChanged
+        {
+            get { return _hasChanged; }
+            set { SetProperty(ref _hasChanged, value); }
+        }
+
+        /// <summary>
+        /// Gets or sets whether changes are being tracked.
+        /// </summary>
+        public bool IsTrackingChanges { get; set; }
+        
         /// <summary>
         /// Checks if a property already matches a desired value.  Sets the property and
         /// notifies listeners only when necessary.
@@ -27,6 +51,14 @@ namespace DK.Framework.Store
 
             storage = value;
             this.OnPropertyChanged(propertyName);
+
+            if ((IsTrackingChanges) &&
+                (!HasChanged) && 
+                (IsChangeTrackable(propertyName)))
+            {
+                HasChanged = true;
+            }
+
             return true;
         }
 
@@ -50,8 +82,27 @@ namespace DK.Framework.Store
         }
 
         /// <summary>
-        /// Fired when a bindable property changes.
+        /// Determines if a declared property on this type is set for change tracking.
         /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
+        /// <param name="propertyName">The name of the declared property to check for change tracking.</param>
+        /// <returns>True if the declared property exists and is set for change tracking; Otherwise false.</returns>
+        bool IsChangeTrackable(string propertyName)
+        {
+            if (!string.IsNullOrEmpty(propertyName))
+            {
+                Type bindableType = this.GetType();
+
+                PropertyInfo changedProperty = bindableType.GetRuntimeProperty(propertyName);
+
+                if (changedProperty != null)
+                {
+                    var changeTrackAttribute = changedProperty.GetCustomAttribute<TrackChangeAttribute>();
+
+                    return (changeTrackAttribute != null);
+                } 
+            }
+
+            return false;
+        }
     }
 }
