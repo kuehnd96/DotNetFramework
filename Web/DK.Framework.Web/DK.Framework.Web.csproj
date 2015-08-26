@@ -123,15 +123,14 @@
     <Compile Include="WebAPI\WebAPIBaseController.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\..\Core\DK.Framework.Core\DK.Framework.Core.csproj">
-      <Project>{4a969959-24a9-4f31-b9db-c5d6080d7723}</Project>
+      <Project>{dbf2a7a5-9ff9-4c5f-a930-c8fe5bad0290}</Project>
       <Name>DK.Framework.Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>if $(ConfigurationName) == Release xcopy /y $(ProjectDir)$(OutDir)$(TargetFileName) C:\_code\Lib
