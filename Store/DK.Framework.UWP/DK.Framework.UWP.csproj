@@ -95,6 +95,7 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>true</Prefer32Bit>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <PlatformTarget>x86</PlatformTarget>
@@ -117,8 +118,6 @@
     <Compile Include="Attributes\ScreenAttribute.cs" />
     <Compile Include="Attributes\TrackChangeAttribute.cs" />
     <Compile Include="BaseStorePage.cs" />
-    <Compile Include="Behaviors\Behavior.cs" />
-    <Compile Include="Behaviors\UpdateSourceOnTextChangedBehavior.cs" />
     <Compile Include="Bindable.cs" />
     <Compile Include="Commands\DelegateCommand.cs" />
     <Compile Include="CompositionStarter.cs" />
@@ -147,11 +146,6 @@
       <Project>{dbf2a7a5-9ff9-4c5f-a930-c8fe5bad0290}</Project>
       <Name>DK.Framework.Core</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <SDKReference Include="BehaviorsXamlSDKManaged, Version=12.0">
-      <Name>Behaviors SDK %28XAML%29</Name>
-    </SDKReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
